@@ -1,83 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shyam Advisory</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #0a4b72;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .main-content {
-            padding: 20px;
-            background-color: white;
-        }
-        .main-content h2 {
-            color: #0a4b72;
-        }
-        .services {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .service {
-            background-color: #e1e1e1;
-            padding: 20px;
-            border-radius: 8px;
-            width: 20%;
-            text-align: center;
-        }
-        .service h3 {
-            color: #0a4b72;
-        }
-        footer {
-            background-color: #0a4b72;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<header>
-    <h1>Shyam Advisory</h1>
-    <p>Your Trusted Share Market Advisors</p>
-</header>
+/* Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
 
-<div class="main-content">
-    <h2>Why Choose Us?</h2>
-    <p>With over 13 years of experience, Shyam Advisory offers the best advice and risk-managed calls for stocks, commodities, forex, and more.</p>
-    
-    <div class="services">
-        <div class="service">
-            <h3>Equity</h3>
-            <p>Get recommendations on the right stocks at the right time.</p>
-        </div>
-        <div class="service">
-            <h3>MCX</h3>
-            <p>Expert advice on bullion, energy, and metal markets.</p>
-        </div>
-        <div class="service">
-            <h3>Forex</h3>
-            <p>Currency market insights and trading strategies.</p>
-        </div>
-    </div>
-</div>
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+}
 
-<footer>
-    <p>&copy; 2024 Shyam Advisory. All Rights Reserved.</p>
-</footer>
+header .logo h1 {
+    font-size: 1.8rem;
+}
 
-</body>
-</html>
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 4rem 1rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+/* Services Section */
+.services {
+    padding: 3rem 1rem;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+}
+
+/* About Section */
+.about {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 1rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
